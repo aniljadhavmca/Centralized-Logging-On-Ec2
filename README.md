@@ -13,6 +13,16 @@ In this setup:
 
 This design ensures **observability, cost efficiency, and disk safety**.
 
+
+## Architecture Overview
+
+To help visualize the centralized logging flow on EC2:
+
+![Centralized Logging on EC2](https://github.com/aniljadhavmca/Centralized-Logging-On-Ec2/blob/main/Centralized%20Logging%20on%20EC2%20using%20CloudWatch%2C%20S3%20%26%20Log%20Rotation.png?raw=true)
+
+> EC2 logs → CloudWatch Agent → CloudWatch Logs → EventBridge → Lambda → S3
+
+
 ---
 
 ## Objective of This Setup
@@ -46,6 +56,9 @@ Attach an IAM role to the EC2 instance with the following managed policy:
 * `CloudWatchAgentServerPolicy`
 
 This allows the EC2 instance to push logs to CloudWatch.
+
+### If you want more details steps use the documents attached Multicloud with devops by veera nareshit.
+### Same for Log Rotations steps we have attcheed Naresh IT document
 
 ---
 
